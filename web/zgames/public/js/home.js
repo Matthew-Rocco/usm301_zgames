@@ -8,7 +8,20 @@ const cargarMarcas = async()=>{
         let option = document.createElement("option");
         option.innerText = m;
         marcaSelect.appendChild(option);
-    })
-}
+    });
+};
 
 cargarMarcas();
+
+document.querySelector("#registrar-btn").addEventListener("click", async ()=>{
+    let nombre = document.querySelector("#nombre-txt").value;
+    let marca = document.querySelector("#marca-select").value;
+    let anio = document.querySelector("#anio-txt").value;
+    let consola = {};
+    consola.nombre = nombre;
+    consola.marca = marca;
+    consola.anio = anio;
+    console.log(consola);
+    let res = await crearConsola(consola);
+    Swal.fire("Consola Creada", "Consola creada exitosamente", "info");
+});

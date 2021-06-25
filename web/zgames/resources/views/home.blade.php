@@ -23,7 +23,7 @@
                         <input type="number" class="form-control" id="anio-txt">
                     </div>
                     <div class="card-footer d-grip gap-1">
-                        <button class="btn btn-info">Registrar</button>
+                        <button id="registrar-btn" class="btn btn-info">Registrar</button>
                     </div>
                 </div>
             </div>
@@ -33,5 +33,6 @@
 
 @endsection
 @section("javascript")
+    <script src="{{asset('js/servicios/consolasServices.js')}}"></script>
     <script src="{{asset('js/home.js')}}"></script>
 @endsection

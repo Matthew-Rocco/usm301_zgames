@@ -8,7 +8,8 @@ use App\Models\Consola;
 class ConsolasController extends Controller
 {
     public function getMarcas(){
-        $marcas = array(); // $marcas=["Sony","Microsoft","Nintendo","Sega"];
+        $marcas = array();
+        //$marcas=["Sony","Microsoft","Nintendo","Sega"];
         $marcas[] = "Sony";
         $marcas[] = "Microsoft";
         $marcas[] = "Nintendo";
@@ -22,14 +23,15 @@ class ConsolasController extends Controller
         return $consolas;
     }
 
-    public function crearConsolas(){
+    public function crearConsolas(Request $request){
+        $input = $request->all();
         $consola = new Consola();
-        $consola->nombre = "Nintendo Switch";
-        $consola->marca = "Nintendo";
-        $consola->anio = 2017;
+        $consola->nombre = $input["nombre"];
+        $consola->marca = $input["marca"];
+        $consola->anio = $input["anio"];
 
         $consola->save();
-        return $consola
+        return $consola;
     }
 
 
