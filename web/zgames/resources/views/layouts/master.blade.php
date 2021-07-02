@@ -12,25 +12,24 @@
   </head>
   <body>
     <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{{route('home')}}">
-      <img class="logo" src="{{asset('img/logo.png')}}">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="{{route('home')}}">Agregar consolas</a>
-        <a class="nav-link" href="{{route('ver_consolas')}}">Ver consolas</a>
-        <a class="nav-link" href="{{route('ver_juegos')}}">Ver juegos</a>
-        <a class="nav-link" href="{{route('agregar_juegos')}}">Agregar juegos</a>
-      </div>
-    </div>
-  </div>
-</nav>
-
+      <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{{route('home')}}">
+          <img class="logo" src="{{asset('img/logo.png')}}">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="{{route('home')}}">Agregar consolas</a>
+              <a class="nav-link" href="{{route('ver_consolas')}}">Ver consolas</a>
+              <a class="nav-link" href="{{route('ver_juegos')}}">Ver juegos</a>
+              <a class="nav-link" href="{{route('agregar_juegos')}}">Agregar juegos</a>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
     <main class="container-fluid">
         @yield("contenido")
